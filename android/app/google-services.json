@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "841343516457",
+    "project_id": "emfetch",
+    "storage_bucket": "emfetch.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841343516457:android:e22388298697311b92c138",
+        "android_client_info": {
+          "package_name": "com.example.emfetch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841343516457-7shee9lg080jtl9rn7bjmdvu10budogi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.emfetch",
+            "certificate_hash": "8f810f8c13632807080f417d0a124aea7f388750"
+          }
+        },
+        {
+          "client_id": "841343516457-4qvpqdj222ttlfdu81tf8373vdp316kj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQMysyABQds6nWVw4mQp5v0NEP6kAzL4w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841343516457-4qvpqdj222ttlfdu81tf8373vdp316kj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
