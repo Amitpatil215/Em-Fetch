@@ -46,6 +46,8 @@ class EmailInvitationController extends GetxController {
         print(_googleSignIn.currentUser.displayName);
         await getUserContacts();
       } catch (er) {
+        Get.snackbar('Sign in and get contacts error', er.toString(),
+            snackPosition: SnackPosition.BOTTOM);
         print('try catch block for controller and getting user contacts');
         print(er);
       }
@@ -54,6 +56,8 @@ class EmailInvitationController extends GetxController {
 
   Future<void> getUserContacts() async {
     try {
+      Get.snackbar('Get User Contacts called', '',
+          snackPosition: SnackPosition.BOTTOM);
       final host = 'https://people.googleapis.com';
       var endPoint =
           '/v1/people/me/connections?personFields=names,emailAddresses&&pageSize=300';
@@ -77,7 +81,7 @@ class EmailInvitationController extends GetxController {
             print('');
             userContactEmailList.add(
               UserContactEmail(
-                name: val['names'][0]['displayName'],
+                //  name: val['names'][0]['displayName'],
                 email: val['emailAddresses'][0]['value'],
               ),
             );
@@ -87,14 +91,19 @@ class EmailInvitationController extends GetxController {
         update();
 
         userContactEmailList.forEach((user) {
-          print(user.name);
+          // print(user.name);
           print(user.email);
           print('');
         });
       });
+      Get.snackbar(
+          '${userContactEmailList.length} Imported Contacts Succesfully', '',
+          snackPosition: SnackPosition.BOTTOM);
 
       print('Loading completed');
     } catch (err) {
+      Get.snackbar('Err while fetching contacts', err.toString(),
+          snackPosition: SnackPosition.BOTTOM);
       print('error while fetching contacts');
       print(err);
     }

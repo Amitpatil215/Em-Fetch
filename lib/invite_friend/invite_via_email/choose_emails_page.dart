@@ -54,8 +54,8 @@ class _ChooseEmailsPageState extends State<ChooseEmailsPage> {
                 },
                 value: _controller.userContactEmailList[index].isSelected,
                 key: ValueKey(index),
-                title: Text(_controller.userContactEmailList[index].name),
-                subtitle: Text(_controller.userContactEmailList[index].email),
+                title: Text(_controller.userContactEmailList[index].email),
+                //subtitle: Text(_controller.userContactEmailList[index].email),
               );
             },
           );
