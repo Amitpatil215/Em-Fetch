@@ -4,8 +4,6 @@ import 'package:emfetch/invite_friend/invite_via_email/invite_via_email_controll
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
-
 // ignore: must_be_immutable
 class ChooseEmailsPage extends StatefulWidget {
   @override
