@@ -1,0 +1,32 @@
+#the name of workflow
+name: build and deploy
+
+#Trigger the workflow on push
+on:
+  push:
+    branches: [ amit ]
+#a workflow run is made up of one or more jobs. Jobs run in parallel by default.
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      # The flutter action needs java so include it
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '12.x'   #12.x
+      # Include the flutter action
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '1.22.5'
+          channel: 'stable'
+      # Get flutter packages
+      - run: flutter clean
+      - run: flutter pub get
+      # Build :D
+      - run: flutter build apk
+      - name: Upload APK
+        uses: actions/upload-artifact@v1
+        with:
+          name: account
+          path: build/app/outputs/flutter-apk/app-release.apk
