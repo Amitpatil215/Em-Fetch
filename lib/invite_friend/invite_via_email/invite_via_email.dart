@@ -1,15 +1,13 @@
 import 'dart:ui';
 
-import 'package:emfetch/background_clip.dart';
-import 'package:emfetch/colors.dart';
-import 'package:emfetch/custom_button.dart';
+import 'package:emfetch/Constants/background_clip.dart';
+import 'package:emfetch/Constants/colors.dart';
+import 'package:emfetch/Constants/custom_button.dart';
+import 'package:emfetch/Constants/my_app_bar.dart';
 import 'package:emfetch/invite_friend/invite_via_email/choose_emails_page.dart';
 import 'package:emfetch/invite_friend/invite_via_email/invite_via_email_controller.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-
-import '../../my_app_bar.dart';
 
 // ignore: must_be_immutable
 class EmailInvitation extends StatelessWidget {

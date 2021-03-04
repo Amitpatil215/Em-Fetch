@@ -1,9 +1,10 @@
+import 'package:emfetch/Constants/colors.dart';
+import 'package:emfetch/Constants/my_app_bar.dart';
 import 'package:emfetch/invite_friend/invite_via_email/invite_via_email_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../colors.dart';
-import '../../my_app_bar.dart';
+
 
 // ignore: must_be_immutable
 class ChooseEmailsPage extends StatefulWidget {
